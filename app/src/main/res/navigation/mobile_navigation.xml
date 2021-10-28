@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.joseduarte.practicafinalprimertrimestres.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_exhibitions_list"
+            app:destination="@id/nav_exhibitions_fragment" />
+        <action
+            android:id="@+id/action_home_to_works_list"
+            app:destination="@id/nav_works_fragment" />
+        <action
+            android:id="@+id/action_home_to_artists_list"
+            app:destination="@id/nav_artists_fragment" />
+        <action
+            android:id="@+id/action_home_to_comments_list"
+            app:destination="@id/nav_comments_fragment" />
+        <action
+            android:id="@+id/action_home_new_exhibition"
+            app:destination="@id/nav_creation_exhibitions" />
+        <action
+            android:id="@+id/action_home_new_work"
+            app:destination="@id/nav_creation_works" />
+        <action
+            android:id="@+id/action_home_new_artist"
+            app:destination="@id/nav_creation_artistas" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_artists_fragment"
+        android:name="com.joseduarte.practicafinalprimertrimestres.ui.lists.ArtistsFragment"
+        android:label="@string/artist_list" >
+        <action
+            android:id="@+id/action_artist_list_new_artist"
+            app:destination="@id/nav_creation_artistas" />
+        <action
+            android:id="@+id/action_artistas_list_to_models_information"
+            app:destination="@id/nav_models_information" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.joseduarte.practicafinalprimertrimestres.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/nav_exhibitions_fragment"
+        android:name="com.joseduarte.practicafinalprimertrimestres.ui.lists.ExhibitionsFragment"
+        android:label="@string/list_exhibitions">
+        <action
+            android:id="@+id/action_exhibitions_list_new_exhibitions"
+            app:destination="@id/nav_creation_exhibitions" />
+        <action
+            android:id="@+id/action_exhibitions_list_to_models_information"
+            app:destination="@id/nav_models_information" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_models_information"
+        android:name="com.joseduarte.practicafinalprimertrimestres.ui.models.ModelsInformation"
+        android:label="{title}" >
+        <argument
+            android:name="models"
+            app:argType="com.joseduarte.practicafinalprimertrimestres.models.Models" />
+        <argument
+            android:name="modelClass"
+            app:argType="java.lang.Class" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="Model" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_comments_fragment"
+        android:name="com.joseduarte.practicafinalprimertrimestres.ui.lists.CommentsSearchableFragment"
+        android:label="@string/comments_list" />
+    <fragment
+        android:id="@+id/nav_works_fragment"
+        android:name="com.joseduarte.practicafinalprimertrimestres.ui.lists.WorksFragment"
+        android:label="@string/work_list" >
+        <action
+            android:id="@+id/action_work_list_new_work"
+            app:destination="@id/nav_creation_works" />
+        <action
+            android:id="@+id/action_work_list_to_models_information"
+            app:destination="@id/nav_models_information" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_creation_works"
+        android:name="com.joseduarte.practicafinalprimertrimestres.ui.creation.TrabajoCreationFragment"
+        android:label="@string/new_work"
+        tools:layout="@layout/model_creation_works" >
+        <argument
+            android:name="addMode"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="model"
+            app:argType="com.joseduarte.practicafinalprimertrimestres.models.Models" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_creation_artistas"
+        android:name="com.joseduarte.practicafinalprimertrimestres.ui.creation.ArtistasCreationFragment"
+        android:label="@string/new_artist"
+        tools:layout="@layout/model_creation_artist" >
+        <argument
+            android:name="addMode"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="model"
+            app:argType="com.joseduarte.practicafinalprimertrimestres.models.Models" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_creation_exhibitions"
+        android:name="com.joseduarte.practicafinalprimertrimestres.ui.creation.ExposicionesCreationFragment"
+        android:label="@string/new_exhibitions"
+        tools:layout="@layout/model_creation_exhibitions" >
+        <argument
+            android:name="addMode"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="models"
+            app:argType="com.joseduarte.practicafinalprimertrimestres.models.Models" />
+    </fragment>
+</navigation>
