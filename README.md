@@ -1,6 +1,6 @@
 # USER MANUAL - FINAL PRACTICE FIRST QUARTER, PDM
 - STUDENT: JOSE ANTONIO DUARTE PÉREZ
-- APPLICATION: Showroom)
+- APPLICATION: Showroom
 - IMPORTANT DATA:
 The database uses CASCADE DELETE, so, if a exhibition comment is created on one exhibition,
 and we delete the exhibition, then the comment will also be deleted
