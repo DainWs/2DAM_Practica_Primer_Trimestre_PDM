@@ -33,3 +33,18 @@ Only the Expone record will be deleted.
 
 When you login for the first time, a login window appears to you, in which
 you must fill in the fields to save a password for next time sign in.
+
+## Home
+![Home](https://github.com/DainWs/2DAM_Practica_Primer_Trimestre_PDM/blob/master/documentation/Home.png?raw=true)
+
+## Menu
+![Menu](https://github.com/DainWs/2DAM_Practica_Primer_Trimestre_PDM/blob/master/documentation/Menu.png?raw=true)
+
+## Listas
+![Listas](https://github.com/DainWs/2DAM_Practica_Primer_Trimestre_PDM/blob/master/documentation/Listas.png?raw=true)
+
+## Artistas
+![Artists](https://github.com/DainWs/2DAM_Practica_Primer_Trimestre_PDM/blob/master/documentation/Artists.png?raw=true)
+
+## Objects
+![Objects](https://github.com/DainWs/2DAM_Practica_Primer_Trimestre_PDM/blob/master/documentation/objects.png?raw=true)
